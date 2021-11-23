@@ -1,0 +1,10 @@
+import(methods, stats)
+
+export(
+ "SKNN",
+ "PCAy"
+)
+
+exportClasses(PCAyd)
+
+
