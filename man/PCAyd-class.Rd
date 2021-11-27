@@ -6,8 +6,7 @@
 \title{ Class to contain the results from revised PCA analysis. }
 
 \description{
-The function PCAy return object of class PCAyd that contains the number of clusters, 
-the center of each cluster, and the observations in each cluster.
+The function PCAy returns object of class PCAyd.
 }
 
 \section{Objects from the Class}{
@@ -22,10 +21,14 @@ new("PCAyd",Var=new("numeric"),PC=new("matrix"),Scores=new("matrix"),IScores=new
     }
 }
 
-\references{Yi Ya, Yarong Yang, Nader Ebrahimi, and Jacob Zhang. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
+\references{Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
+in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
+
+Yi Ya, Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
 }
+
 \author{
-Yi Ya and Yarong Yang
+Yi Ya, Yarong Yang, and Yoram Rubin
 }
 \examples{
 showClass("PCAyd")

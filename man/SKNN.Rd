@@ -17,9 +17,12 @@ SKNN(data, Class, k, test, Dens)
  
 \value{A character.}
 \author{Yi Ya and Yarong Yang }
-\references{Yi Ya, Yarong Yang, Nader Ebrahimi, and Jacob Zhang. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
+\references{Yi Ya, Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
 
 Yarong Yang and Nader Ebrahimi (2010). Two Mutual Information Estimators based on Kernel Density Estimation. part of Yarong Yang's Ph.D. dissertation
+
+Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
+in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
 }
 
 
