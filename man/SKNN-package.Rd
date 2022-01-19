@@ -10,18 +10,19 @@ the weight of the distance between a training observation and the sample to be c
 \tabular{ll}{
 Package: \tab SKNN\cr
 Type: \tab Package\cr
-Version: \tab 2.0\cr
-Date: \tab 2021-11-25\cr
+Version: \tab 3.0\cr
+Date: \tab 2022-01-18\cr
 License: \tab GPL-2\cr
 }
  }
-\author{ Yi Ya, Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang  }
-\references{Yi Ya, Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
+\author{ Yi Ya, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang  }
+\references{Nader Ebrahimi, Yi Ya, and Yoram Rubin. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
 
 Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
 in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
 
-Yarong Yang and Nader Ebrahimi (2010). Two Mutual Information Estimators based on Kernel Density Estimation. part of Yarong Yang's Ph.D. dissertation
+B.B.W. Silverman. Density Estimation for Statistics and Data Analysis. London: Chapman and
+  Hall, 1986.
 }
 
 \keyword{package }
@@ -32,23 +33,25 @@ Sepal.Length<-c(4.8, 5.1, 4.6, 5.3, 5.0, 5.7, 5.7, 6.2, 5.1, 5.7, 6.7, 6.3, 6.5,
 Sepal.Width<-c(3.0, 3.8, 3.2, 3.7, 3.3, 3.0, 2.9, 2.9, 2.5, 2.8, 3.0, 2.5, 3.0, 3.4, 3.0)
 Petal.Length<-c(1.4, 1.6, 1.4, 1.5, 1.4, 4.2, 4.2, 4.3, 3.0, 4.1, 5.2, 5.0, 5.2, 5.4, 5.1)
 Petal.Width<-c(0.3, 0.2, 0.2, 0.2, 0.2, 1.2, 1.3, 1.3, 1.1, 1.3, 2.3, 1.9, 2.0, 2.3, 1.8)
-Species<-as.factor(c(rep("setosa",5),rep("versicolor",5),rep("virginica",5)))
+Species<-as.factor(c(rep("red",5),rep("blue",5),rep("green",5)))
 iris<-cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)
 Res<-length(nrow(iris))
+k<-10
 for(i in 1:nrow(iris)) 
-     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=10,test=iris[i,],Dens=3)
-percentage<-length(which(Res==Species))/length(Res)
-COL<-rep(0,length(Species))
-COL[which(Res==levels(Species)[1])]<-1
-COL[which(Res==levels(Species)[2])]<-2
-COL[which(Res==levels(Species)[3])]<-3
-ind<-1:15
-#plot training observations
-plot(1:length(ind),xlab="observations",ylab="",rep(1,length(ind)),ylim=c(0,3),type="p",
-lwd=2,col=Species[ind])
-#add the classification results for comparison
-points(1:length(ind),rep(2,length(ind)),pch=15,col=COL[ind])
-
+     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,])
+accuracy<-length(which(Res==Species))/length(Species)
+plot(x=1:15,y=rep(1,15),col=as.vector(Species),lwd=4,ylim=c(0,3),xlab="",ylab="",
+yaxt = "n",xaxt="n")
+par(new=TRUE)
+plot(x=1:15,y=rep(2,15),col=Res,lwd=4,ylim=c(0,3),xlab="",ylab="",yaxt = "n",xaxt="n")
+ind<-which(Res!=Species)
+if(length(ind)>0) {
+  for(j in 1:length(ind))
+      lines(x=c(ind[j],ind[j]),y=c(1+0.05,2-0.05))
+}
+text(5,0.3,paste("SKNN Misclassified:",length(ind)))
+axis(2,at=2,labels="SKNN",las=1)
+text(10,2.5,paste("k: ",k))
 
 }
 

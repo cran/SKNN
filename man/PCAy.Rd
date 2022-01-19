@@ -16,7 +16,7 @@ PCAy(data)
 \references{Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
 in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
 
-Yi Ya, Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
+Nader Ebrahimi, Yi Ya, and Yoram Rubin. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
 }
 
 

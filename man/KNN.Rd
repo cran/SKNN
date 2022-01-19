@@ -1,11 +1,11 @@
-\name{SKNN}
-\alias{SKNN}
-\title{Super K-Nearest Neighbor (SKNN) Classification}
+\name{KNN}
+\alias{KNN}
+\title{ K-Nearest Neighbor Classification }
 \description{
-    It's a Super K-Nearest Neighbor classification method with using kernel density to describe weight of the distance between a training observation and the testing sample.
+    It's implementation of the K-Nearest Neighbor classification method for data of any number of dimentions.
 }  
 \usage{
-SKNN(data, Class, k, test)
+KNN(data, Class, k, test)
 }
 \arguments{
   \item{data}{ Numeric. The training data set, matrix.}
@@ -15,17 +15,11 @@ SKNN(data, Class, k, test)
 }
  
 \value{A character.}
-\author{Yi Ya, Nader Ebrahimi, and Yoram Rubin}
-\references{ Nader Ebrahimi, Yi Ya, and Yoram Rubin. SKNN: A Super K-Nearest Neighbor Classification Algorithm. ongoing
-
-Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
-in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
-
-B.B.W. Silverman. Density Estimation for Statistics and Data Analysis. London: Chapman and
-  Hall, 1986.
+\author{Yi Ya}
+\references{
+A.T. Covert and P. Hart. Nearest Neighbor Pattern Classification. IEEE Transactions on
+Information Theory, 13(1): 21-27, 1967.
 }
-
-
 
 \examples{
 
@@ -38,7 +32,7 @@ iris<-cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)
 Res<-length(nrow(iris))
 k<-10
 for(i in 1:nrow(iris)) 
-     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,])
+     Res[i]<-KNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,])
 accuracy<-length(which(Res==Species))/length(Species)
 plot(x=1:15,y=rep(1,15),col=as.vector(Species),lwd=4,ylim=c(0,3),xlab="",ylab="",
 yaxt = "n",xaxt="n")
@@ -49,8 +43,8 @@ if(length(ind)>0) {
   for(j in 1:length(ind))
       lines(x=c(ind[j],ind[j]),y=c(1+0.05,2-0.05))
 }
-text(5,0.3,paste("SKNN Misclassified:",length(ind)))
-axis(2,at=2,labels="SKNN",las=1)
+text(5,0.3,paste("KNN Misclassified:",length(ind)))
+axis(2,at=2,labels="KNN",las=1)
 text(10,2.5,paste("k: ",k))
 
 }

@@ -2,7 +2,9 @@ import(methods, stats)
 
 export(
  "SKNN",
- "PCAy"
+ "PCAy",
+ "KNN",
+ "Dist"
 )
 
 exportClasses(PCAyd)

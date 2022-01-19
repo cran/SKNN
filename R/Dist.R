@@ -1,11 +1,6 @@
-Dist<-function(x,y) {    
-        type<-1    
-	  if(type==1) {
-	      d<-sqrt(sum((x-y)^2))
-	      diff<-x-y
-	  } else {
-		print("Euclidean Distance are required!")
-	  }
+Dist<-function(x,y) {       
+	  d<-sqrt(sum((x-y)^2))
+	  diff<-abs(x-y)
 	  return(list(d=d,diff=diff))
 }
 
