@@ -1,10 +1,9 @@
 Package: SKNN
 Type: Package
 Title: A Super K-Nearest Neighbor (SKNN) Classification Algorithm
-Version: 3.0
-Date: 2022-01-18
+Version: 3.1
+Date: 2022-06-11
 Authors@R: c(person("Yi", "Ya", role=c("aut","cre"),email="Yi.YA_yaya@hotmail.com"),
-             person("Yarong", "Yang", role="aut"),
              person("Nader", "Ebrahimi", role="aut"),
              person("Yoram", "Rubin", role="aut"),
              person("Jacob", "Zhang", role="aut"))
@@ -14,11 +13,10 @@ Description: It's a Super K-Nearest Neighbor classification method with using ke
 Collate: SKNN.R Dist.R PCAy.R AllClasses.R KNN.R
 License: GPL-2
 NeedsCompilation: no
-Packaged: 2022-01-19 09:59:18 UTC; Administrator
+Packaged: 2022-06-11 16:20:12 UTC; Administrator
 Author: Yi Ya [aut, cre],
-  Yarong Yang [aut],
   Nader Ebrahimi [aut],
   Yoram Rubin [aut],
   Jacob Zhang [aut]
 Repository: CRAN
-Date/Publication: 2022-01-19 11:12:42 UTC
+Date/Publication: 2022-06-11 17:00:02 UTC
