@@ -10,13 +10,13 @@ the weight of the distance between a training observation and the sample to be c
 \tabular{ll}{
 Package: \tab SKNN\cr
 Type: \tab Package\cr
-Version: \tab 3.1\cr
-Date: \tab 2022-06-11\cr
+Version: \tab 4.0\cr
+Date: \tab 2024-09-25\cr
 License: \tab GPL-2\cr
 }
  }
 \author{ Yi Ya, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang  }
-\references{ Yarong Yang(Yi Ya).(2022) SKNN: A Super K-Nearest Neighbor Classification Algorithm. submitted to Journal of Statistical Software
+\references{ Yarong Yang(Yi Ya).(2022) SKNN: A Super K-Nearest Neighbor Classification Algorithm. 
 
 Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
 in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
