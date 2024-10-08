@@ -10,13 +10,13 @@ the weight of the distance between a training observation and the sample to be c
 \tabular{ll}{
 Package: \tab SKNN\cr
 Type: \tab Package\cr
-Version: \tab 4.0\cr
-Date: \tab 2024-09-25\cr
+Version: \tab 4.1\cr
+Date: \tab 2024-10-09\cr
 License: \tab GPL-2\cr
 }
  }
-\author{ Yi Ya, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang  }
-\references{ Yarong Yang(Yi Ya).(2022) SKNN: A Super K-Nearest Neighbor Classification Algorithm. 
+\author{ Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang  }
+\references{ Yarong Yang, Nader Ebrahimi, and Yoram Rubin.(2024) SKNN: A Super K-Nearest Neighbor Classification Algorithm. 
 
 Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
 in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
@@ -24,7 +24,7 @@ in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2
 B.B.W. Silverman.(1986) Density Estimation for Statistics and Data Analysis. London: Chapman and Hall.
 }
 
-\keyword{package }
+\keyword{package}
 
 \examples{
 

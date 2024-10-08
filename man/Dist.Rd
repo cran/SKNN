@@ -12,6 +12,6 @@ Dist(x,y)
   \item{y}{ Numeric. A vector denoting an observation.}
 }
 \value{A list.}
-\author{Yi Ya}
+\author{Yarong Yang}
 
 

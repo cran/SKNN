@@ -15,7 +15,7 @@ KNN(data, Class, k, test)
 }
  
 \value{A character.}
-\author{Yi Ya}
+\author{Yarong Yang}
 \references{
 A.T. Covert and P. Hart. Nearest Neighbor Pattern Classification. IEEE Transactions on
 Information Theory, 13(1): 21-27, 1967.
