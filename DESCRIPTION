@@ -1,22 +1,22 @@
 Package: SKNN
 Type: Package
 Title: A Super K-Nearest Neighbor (SKNN) Classification Algorithm
-Version: 4.1
-Date: 2024-10-09
+Version: 4.1.1
+Date: 2025-09-09
 Authors@R: c(person("Yarong", "Yang", role=c("aut","cre"),email="Yi.YA_yaya@hotmail.com"),
-             person("Nader", "Ebrahimi", role="aut"),
-             person("Yoram", "Rubin", role="aut"),
-             person("Jacob", "Zhang", role="aut"))
+             person("Nader", "Ebrahimi", role="ctb"),
+             person("Yoram", "Rubin", role="ctb"),
+             person("Jacob", "Zhang", role="ctb"))
 Maintainer: Yarong Yang <Yi.YA_yaya@hotmail.com>
 Depends: methods, stats
-Description: It's a Super K-Nearest Neighbor classification method with using kernel density to describe weight of the distance between a training observation and the testing sample. 
+Description: It's a Super K-Nearest Neighbor(SKNN) classification method with using kernel density to describe weight of the distance between a training observation and the testing sample. Comparison of performance between SKNN and KNN shows that SKNN is significantly superior to KNN.
 Collate: SKNN.R Dist.R PCAy.R AllClasses.R KNN.R
 License: GPL-2
 NeedsCompilation: no
-Packaged: 2024-10-08 18:35:48 UTC; yi_ya
+Packaged: 2025-09-09 06:08:26 UTC; Yarong
 Author: Yarong Yang [aut, cre],
-  Nader Ebrahimi [aut],
-  Yoram Rubin [aut],
-  Jacob Zhang [aut]
+  Nader Ebrahimi [ctb],
+  Yoram Rubin [ctb],
+  Jacob Zhang [ctb]
 Repository: CRAN
-Date/Publication: 2024-10-08 20:10:01 UTC
+Date/Publication: 2025-09-09 07:20:20 UTC

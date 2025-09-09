@@ -2,21 +2,21 @@
 \alias{SKNN-package}
 \docType{package}
 \title{ Super K-Nearest Neighbor (SKNN) Classification}
-\description{ It's a Super K-Nearest Neighbor classification method with using kernel density to describe 
-the weight of the distance between a training observation and the sample to be classified.
+\description{ It's a Super K-Nearest Neighbor (SKNN) classification method with using kernel density to describe 
+the weight of the distance between a training observation and the sample to be classified. Comparison of performance between SKNN and KNN shows that SKNN is significantly superior to KNN.
 }  
 
 \details{
 \tabular{ll}{
 Package: \tab SKNN\cr
 Type: \tab Package\cr
-Version: \tab 4.1\cr
-Date: \tab 2024-10-09\cr
+Version: \tab 4.1.1\cr
+Date: \tab 2025-09-09\cr
 License: \tab GPL-2\cr
 }
  }
 \author{ Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang  }
-\references{ Yarong Yang, Nader Ebrahimi, and Yoram Rubin.(2024) SKNN: A Super K-Nearest Neighbor Classification Algorithm. 
+\references{ Yarong Yang, Nader Ebrahimi, and Yoram Rubin.(2025) SKNN: A Super K-Nearest Neighbor Classification Algorithm. technical report in preparation
 
 Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
 in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
