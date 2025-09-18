@@ -16,7 +16,7 @@ SKNN(data, Class, k, test)
  
 \value{A character.}
 \author{Yarong Yang, Nader Ebrahimi, and Yoram Rubin}
-\references{ Yarong Yang, Nader Ebrahimi, and Yoram Rubin.(2025) SKNN: A Super K-Nearest Neighbor Classification Algorithm. technical report in preparation
+\references{ Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang.(2025) SKNN: A Super K-Nearest Neighbor Classification Algorithm. technical report in preparation
 
 Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
 in Inverse Modeling Schemes. Water Resources Research, 48, W08519, doi:10.1029/2012WR011864. 
