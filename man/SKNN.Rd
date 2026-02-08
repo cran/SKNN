@@ -5,17 +5,18 @@
     It's a Super K-Nearest Neighbor classification method with using kernel density to describe weight of the distance between a training observation and the testing sample.
 }  
 \usage{
-SKNN(data, Class, k, test)
+SKNN(data, Class, k, test, ker)
 }
 \arguments{
   \item{data}{ Numeric. The training data set, matrix.}
   \item{Class}{ Character.  Class of the training observations, vector.}
   \item{k}{ Integer. The number of K to be used.     }
   \item{test}{ Numeric. The sample to be classified. }
+  \item{ker}{ Character. 'GK', 'EK', or 'TK'. The kernel function to be used.}
 }
  
 \value{A character.}
-\author{Yarong Yang, Nader Ebrahimi, and Yoram Rubin}
+\author{Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang}
 \references{ Yarong Yang, Nader Ebrahimi, Yoram Rubin, and Jacob Zhang.(2025) SKNN: A Super K-Nearest Neighbor Classification Algorithm. technical report in preparation
 
 Yarong Yang, Matt Over, and Yoram Rubin.(2012) Strategic Placement of Localization Devices (such as Pilot Points and Anchors) 
@@ -38,7 +39,7 @@ iris<-cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)
 Res<-length(nrow(iris))
 k<-10
 for(i in 1:nrow(iris)) 
-     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,])
+     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,],ker="GK")
 accuracy<-length(which(Res==Species))/length(Species)
 plot(x=1:15,y=rep(1,15),col=as.vector(Species),lwd=4,ylim=c(0,3),xlab="",ylab="",
 yaxt = "n",xaxt="n")

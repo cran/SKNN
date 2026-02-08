@@ -1,15 +1,35 @@
-SKNN<-function(data, Class, k, test) {
+SKNN<-function(data, Class, k, test, ker) {    
+ 
+         EK<-function(d) {
+             ek<-ifelse(abs(d)>1,0,3*(1-d^2)/4)
+             ek
+         }
+
+         BK<-function(d) {
+             ek<-ifelse(abs(d)>1,0,15/16*(1-d^2)^2)
+             ek
+         }
+
+         TK<-function(d) {
+             ek<-ifelse(abs(d)>1,0,1-abs(d))
+             ek
+         }
          
-         Ker.normal<-function(data,test){
-              ker<-vector()
+         Kers<-function(data,test){
+              kernel<-vector()
               for(i in 1:nrow(data)) {
                   diff<-Dist(data[i,],test)$diff
-                  f.normal<-vector()
-                  for(j in 1:ncol(data)) 
-                        f.normal[j]<-dnorm(diff[j],0,1)
-                  ker[i]<-prod(f.normal)
+                  f<-vector()
+                  for(j in 1:ncol(data)) { 
+                        if(ker=="GK") f[j]<-dnorm(diff[j],0,1)
+                        if(ker=="EK") f[j]<-EK(diff[j]/max(diff))
+                        if(ker=="BK") f[j]<-BK(diff[j]/max(diff))
+                        if(ker=="TK") f[j]<-TK(diff[j]/max(diff))
+                  }
+                  f.v<-f[which(f!=0)]
+                  kernel[i]<-prod(f.v)
               }
-              Ker<-sum(ker)
+              Ker<-sum(kernel)
          }
 
 	   K<-length(levels(as.factor(Class)))
@@ -34,7 +54,7 @@ SKNN<-function(data, Class, k, test) {
 	   	    cl[i]<-it
 	   	    ip<-which(Cl %in% it)
 		    dat<-matrix(Dat[ip,],nrow=length(ip))
-                dens[i]<-Ker.normal(dat,test)
+                 dens[i]<-Kers(dat,test)
 	   }
 	   
 	   cl[which(dens==max(dens))[1]]	   

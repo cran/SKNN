@@ -10,8 +10,8 @@ the weight of the distance between a training observation and the sample to be c
 \tabular{ll}{
 Package: \tab SKNN\cr
 Type: \tab Package\cr
-Version: \tab 4.1.2\cr
-Date: \tab 2025-09-12\cr
+Version: \tab 4.1.3\cr
+Date: \tab 2026-02-08\cr
 License: \tab GPL-2\cr
 }
  }
@@ -37,7 +37,7 @@ iris<-cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)
 Res<-length(nrow(iris))
 k<-10
 for(i in 1:nrow(iris)) 
-     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,])
+     Res[i]<-SKNN(data=iris,Class=as.vector(Species),k=k,test=iris[i,],ker="GK")
 accuracy<-length(which(Res==Species))/length(Species)
 plot(x=1:15,y=rep(1,15),col=as.vector(Species),lwd=4,ylim=c(0,3),xlab="",ylab="",
 yaxt = "n",xaxt="n")
